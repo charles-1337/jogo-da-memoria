@@ -1,3 +1,4 @@
+/* Estilos gerais do jogo */
 main {
     margin: none;
     display: flex;
@@ -5,7 +6,6 @@ main {
     width: 100%;
     background-image: url("../images/rugal_stage.gif");
     background-size: cover;
-    position: cover;
     min-height: 80vh;
     align-items: center;
     justify-content: center;
@@ -18,10 +18,10 @@ header {
     height: 20px;
     width: 100%;
     max-width: 380px;
-    margin: 0  0 5px;
+    margin: 0 0 5px;
     border-radius: 4px;
     background-color: rgba(0, 136, 255, 1);
-    background-image: linear-gradient(to left, white 29%, rgb(0, 136, 255) );
+    background-image: linear-gradient(to left, white 29%, rgb(0, 136, 255));
     font-family: "Big Shoulders Stencil Display";
     font-size: 20px;
 }
@@ -32,7 +32,6 @@ header {
     gap: 8px;
     width: 100%;
     max-width: 900px;
-
     margin: 0 auto;
     padding-left: 7px;
     border-radius: 10px;
@@ -46,6 +45,7 @@ header {
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
+    cursor: pointer; /* Adicionado para indicar que é clicável */
 }
 
 .face {
@@ -70,16 +70,26 @@ header {
 }
 
 .reveal-card {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Gira a carta para mostrar a frente */
 }
 
 .disabled-card {
     filter: saturate(0.09);
     opacity: 0.5;
 }
+
+/* Adicionei para mostrar as cartas corretamente */
+.reveal-card .face.front {
+    display: block; /* Exibe a face da frente */
+}
+
+.reveal-card .face.back {
+    display: none; /* Esconde a face de trás */
+}
+
+/* Responsividade */
 @media screen and (max-width:920px) {
     .grid {
-      grid-template-columns: repeat(6, 1fr);
-  
+        grid-template-columns: repeat(6, 1fr);
     }
-  }
+}
