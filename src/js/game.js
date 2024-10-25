@@ -30,7 +30,7 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
     if (disabledCards.length == 24) {
         clearInterval(this.loop);
-        alert(Parabéns, ${spanPlayer.innerHTML}, você conseguiu! Seu tempo foi: ${timer.innerHTML});
+        alert(`Parabéns, ${spanPlayer.innerHTML}, você conseguiu! Seu tempo foi: ${timer.innerHTML}`);
     }
 }
 
