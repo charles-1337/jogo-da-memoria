@@ -108,13 +108,6 @@ const loadGame = () => {
     });
 }
 
-  const allCards = document.querySelectorAll('.card');
-    allCards.forEach(card => card.classList.add('reveal-card'));
-
-    setTimeout(() => {
-        allCards.forEach(card => card.classList.remove('reveal-card'));
-    }, 2000);
-}
 const startTimer = () => {
 
     this.loop = setInterval(() => {
