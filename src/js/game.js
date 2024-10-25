@@ -30,7 +30,7 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
     if (disabledCards.length == 24) {
         clearInterval(this.loop);
-        alert(`Parabéns, ${spanPlayer.innerHTML}, você conseguiu! Seu tempo foi: ${timer.innerHTML}`);
+        alert(Parabéns, ${spanPlayer.innerHTML}, você conseguiu! Seu tempo foi: ${timer.innerHTML});
     }
 }
 
@@ -85,7 +85,7 @@ const createCard = (character) => {
     const front = createElement('div', 'face front');
     const back = createElement('div', 'face back');
 
-    front.style.backgroundImage = `url(../images/${character}.gif) `
+    front.style.backgroundImage = url(../images/${character}.gif) 
     card.appendChild(front);
     card.appendChild(back);
 
